@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <title>search</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body class="vh-100 d-flex flex-column overflow-hidden">
+        <header class="flex-shrink-0">
+            <nav class="navbar bg-body-tertiary">
+
+                <div class="container-fluid">
+
+                    <!-- Top row -->
+                    <div class="d-flex gap-2 align-items-center w-100">
+
+                        <!-- Back -->
+                        <button id="back" class="circular-pushable">
+                            <span class="circular-shadow"></span>
+                            <span class="circular-edge"></span>
+                            <span class="circular-front">
+                                <img src="/assets/back_button.png" class="icon" alt="back">
+                            </span>
+                        </button>
+
+                        <!-- Watchist -->
+                        <button id="home" class="circular-pushable">
+                            <span class="circular-shadow"></span>
+                            <span class="circular-edge"></span>
+                            <span class="circular-front">
+                                <img src="/assets/home_button.png" class="icon" alt="back">
+                            </span>
+                        </button>
+
+                        <!-- Search -->
+                        <form class="d-flex flex-grow-1 mx-2" role="search">
+                            <input
+                                class="form-control"
+                                type="search"
+                                placeholder="Search"
+                                aria-label="Search"
+                                autocomplete="off"
+                                autofocus
+                                name="query">
+                        </form>
+
+                        <!-- Close -->
+                        <button type="button" id="close_popup" class="circular-pushable">
+                            <span class="circular-shadow"></span>
+                            <span class="circular-edge"></span>
+                            <span class="circular-front">X</span>
+                        </button>
+
+                    </div>
+
+                    <!-- Bottom row -->
+                    <div class="d-flex align-items-center w-100 mt-2">
+
+                        <!-- Tags -->
+                        <div class="btn-group gap-2" role="group">
+
+                            <button id="all" class="pushable">
+                                    <span class="shadow"></span>
+                                    <span class="edge"></span>
+                                    <span class="front"> All </span>
+                            </button>
+
+                            <button id="movie" class="pushable">
+                                    <span class="shadow"></span>
+                                    <span class="edge"></span>
+                                    <span class="front"> Movie </span>
+                            </button>
+
+                            <button id="tv" class="pushable">
+                                    <span class="shadow"></span>
+                                    <span class="edge"></span>
+                                    <span class="front"> TV </span>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </nav>
+        </header>
+        <!-- Main content area-->
+        <main class="flex-grow-1 overflow-y-auto">
+
+            <!--Container for cards-->
+            <div class="container-fluid">
+                <div id="card_area" class="row g-3">
+
+
+                </div>
+            </div>
+
+        </main>
+        <script src="config.js"></script>
+        <script src="back_and_home.js"></script>
+        <script src="tags.js"></script>
+        <script src="close.js"></script>
+        <script src="searchbox.js"></script>
+        <script src="add.js"></script>
+        <script src="updatestatus.js"></script>
+        <script src="search_result.js"></script>
+    </body>
+</html>
